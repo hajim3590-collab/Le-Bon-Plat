@@ -1,0 +1,22 @@
+dish_name,category,price,currency,source
+Brochettes mixtes,Grill,20.0,EUR,fournisseur
+Buddha bowl legumes,Vegetarien,14.0,EUR,fournisseur
+Burger maison,Plat_du_jour,12.0,EUR,database
+Carpaccio de boeuf,Entree,9.9,EUR,web
+Cotes d'agneau,Grill,24.0,EUR,database
+Curry de legumes,Vegetarien,12.0,EUR,database
+Entrecote grillee,Grill,22.0,EUR,database
+Fondant chocolat,Dessert,7.0,EUR,fournisseur
+Galette de quinoa,Vegetarien,11.0,EUR,database
+Menu burger enfant,Menu_Enfant,8.5,EUR,fournisseur
+Menu nuggets,Menu_Enfant,8.5,EUR,database
+Menu pates enfant,Menu_Enfant,8.0,EUR,database
+Pates bolognaise,Plat_du_jour,13.0,EUR,database
+Poulet roti frites,Plat_du_jour,14.5,EUR,database
+Risotto aux champignons,Plat_du_jour,15.0,EUR,database
+Salade Cesar,Entree,8.5,EUR,database
+Soupe a l'oignon,Entree,6.0,EUR,database
+Soupe du jour,Entree,5.5,EUR,fournisseur
+Tartare de saumon,Entree,11.0,EUR,database
+Tarte tatin,Dessert,6.0,EUR,database
+Tiramisu,Dessert,6.5,EUR,database

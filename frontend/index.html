@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Bon Plat - Restaurant IA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f0f0f;
+            color: #fff;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: #0f0f0f;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #FF9800;
+        }
+
+        .navbar-brand {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .navbar-brand i {
+            color: #FF9800;
+        }
+
+        .navbar-menu {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .navbar-menu a {
+            color: #ccc;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .navbar-menu a:hover {
+            color: #FF9800;
+        }
+
+        .cart-badge {
+            background: #FF9800;
+            color: #0f0f0f;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 700;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1600&fit=crop');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 40px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .hero h1 .orange {
+            color: #FF9800;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            color: #ddd;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .page {
+            display: none;
+            padding: 40px 0;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 15, 15, 0.15);
+            pointer-events: none;
+        }
+
+        .page > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        #home {
+            background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1600');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #recommendations {
+            background-image: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #menu {
+            background-image: url('https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=1600');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #cart {
+            background-image: url('https://images.unsplash.com/photo-1532635241649-c67f47ecd5a9?w=1600');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #checkout {
+            background-image: url('https://images.unsplash.com/photo-1567521464027-f127ff144326?w=1600');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #confirmation {
+            background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1600');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #reviews {
+            background-image: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section-title {
+            font-size: 2em;
+            margin: 40px 0 30px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title i {
+            color: #FF9800;
+        }
+
+        /* FORM */
+        .rec-form {
+            background: #1a1a1a;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border: 1px solid #333;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 150px;
+            gap: 15px;
+            align-items: flex-end;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            color: #aaa;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select {
+            background: #2a2a2a;
+            border: 1px solid #444;
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 0.95em;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #FF9800;
+            background: #333;
+        }
+
+        .btn-recommend {
+            background: #FF9800;
+            color: #0f0f0f;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .btn-recommend:hover {
+            background: #F57C00;
+            transform: translateY(-2px);
+        }
+
+        /* PRODUCTS GRID */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .product-card {
+            background: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 1px solid #333;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(255,152,0,0.2);
+            border-color: #FF9800;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background: linear-gradient(90deg, #2a2a2a 25%, #333 50%, #2a2a2a 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+
+        .product-image[src] {
+            animation: none;
+            background: none;
+        }
+
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-name {
+            font-weight: 700;
+            font-size: 1.05em;
+            margin-bottom: 5px;
+        }
+
+        .product-category {
+            color: #FF9800;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 1.4em;
+            color: #FF9800;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .btn-add {
+            width: 100%;
+            background: #FF9800;
+            color: #0f0f0f;
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-add:hover {
+            background: #F57C00;
+        }
+
+        /* FILTERS */
+        .filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: #2a2a2a;
+            color: #aaa;
+            border: 1px solid #444;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #FF9800;
+            color: #0f0f0f;
+            border-color: #FF9800;
+        }
+
+        /* CART */
+        .cart-item {
+            background: #1a1a1a;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            border: 1px solid #333;
+        }
+
+        .cart-item-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+
+        .cart-item-info {
+            flex: 1;
+        }
+
+        .cart-item-name {
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .cart-item-price {
+            color: #FF9800;
+            font-size: 0.9em;
+        }
+
+        .cart-controls {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .qty-btn {
+            width: 30px;
+            height: 30px;
+            background: #FF9800;
+            color: #0f0f0f;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .qty-display {
+            width: 40px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .btn-remove {
+            background: #d32f2f;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+        }
+
+        .cart-total {
+            background: #1a1a1a;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border: 2px solid #FF9800;
+            font-size: 1.4em;
+            text-align: right;
+        }
+
+        .cart-total span {
+            color: #FF9800;
+            font-weight: 700;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 60px 20px;
+            color: #aaa;
+        }
+
+        .empty-cart i {
+            font-size: 4em;
+            color: #FF9800;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background: #FF9800;
+            color: #0f0f0f;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1em;
+            width: 100%;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #F57C00;
+        }
+
+        /* CLIENT FORM */
+        .client-form {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 400px;
+            margin: 0 auto 40px;
+            border: 1px solid #333;
+        }
+
+        .client-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .client-form input {
+            width: 100%;
+            background: #2a2a2a;
+            border: 1px solid #444;
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 0.95em;
+        }
+
+        /* CONFIRMATION */
+        .confirmation {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .confirmation h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #FF9800;
+        }
+
+        .ticket {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            margin: 40px auto;
+            border: 1px solid #333;
+            text-align: left;
+        }
+
+        .ticket-header {
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #FF9800;
+            padding-bottom: 15px;
+        }
+
+        .ticket-header h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .ticket-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 8px 0;
+        }
+
+        .ticket-line-product {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+        }
+
+        .ticket-total {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #FF9800;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #FF9800;
+        }
+
+        .btn-print {
+            background: #FF9800;
+            color: #0f0f0f;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        @media print {
+            .navbar, .btn-print, .btn-primary { display: none; }
+            body { background: white; color: black; }
+            .ticket { border: 1px solid black; background: white; }
+        }
+
+        @media (max-width: 900px) {
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+            .navbar { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="navbar-brand">
+            <i class="fas fa-utensils"></i> Le Bon Plat
+        </div>
+        <div class="navbar-menu">
+            <a onclick="showPage('home')"><i class="fas fa-home"></i> Accueil</a>
+            <a onclick="showPage('recommendations')"><i class="fas fa-robot"></i> Recommandations</a>
+            <a onclick="showPage('menu')"><i class="fas fa-book"></i> Menu</a>
+            <a onclick="showPage('cart')"><i class="fas fa-shopping-cart"></i> Panier <span class="cart-badge" id="cart-count">0</span></a>
+            <a onclick="showPage('reviews')"><i class="fas fa-star"></i> Avis</a>
+        </div>
+    </div>
+
+    <!-- HOME PAGE -->
+    <div class="page active" id="home">
+        <div class="hero">
+            <h1>Bienvenue dans notre <span class="orange">Restaurant</span></h1>
+            <p>Découvrez les meilleurs plats adaptés à vos préférences.</p>
+        </div>
+        <div class="container">
+            <div class="section-title">
+                <i class="fas fa-star"></i> Nos spécialités
+            </div>
+            <div class="products-grid" id="featured-products"></div>
+        </div>
+    </div>
+
+    <!-- RECOMMENDATIONS PAGE -->
+    <div class="page" id="recommendations">
+        <div class="container">
+            <div class="section-title">
+                <i class="fas fa-robot"></i> Recommandations Intelligentes
+            </div>
+
+            <!-- ROBOT IA MESSAGE -->
+            <div style="text-align: center; margin: 40px 0; background: rgba(76, 175, 80, 0.1); padding: 30px; border-radius: 15px; border: 2px solid #4CAF50;">
+                <svg width="120" height="120" viewBox="0 0 120 120" style="margin: 0 auto 20px;">
+                    <!-- Robot Body -->
+                    <rect x="35" y="50" width="50" height="50" fill="#4CAF50" stroke="#81C784" stroke-width="2"/>
+                    <!-- Robot Head -->
+                    <circle cx="60" cy="35" r="20" fill="#4CAF50" stroke="#81C784" stroke-width="2"/>
+                    <!-- Eyes -->
+                    <circle cx="50" cy="30" r="4" fill="#000"/>
+                    <circle cx="70" cy="30" r="4" fill="#000"/>
+                    <!-- Smile -->
+                    <path d="M 50 40 Q 60 45 70 40" stroke="#000" stroke-width="2" fill="none"/>
+                    <!-- Arms -->
+                    <rect x="20" y="60" width="15" height="8" fill="#4CAF50" stroke="#81C784" stroke-width="2"/>
+                    <rect x="85" y="60" width="15" height="8" fill="#4CAF50" stroke="#81C784" stroke-width="2"/>
+                    <!-- Food in hand -->
+                    <circle cx="100" cy="55" r="8" fill="#FF9800"/>
+                </svg>
+                <h2 style="color: #4CAF50; margin: 20px 0 10px; font-size: 1.5em;">Je peux vous aider à trouver vos plats selon votre budget.</h2>
+                <p style="color: #000; font-size: 0.95em;">Répondez aux questions ci-dessous et laissez-moi vous recommander les meilleurs plats! 🍽️</p>
+            </div>
+
+            <div class="rec-form">
+                <h3 style="margin-bottom: 20px;">Dites-nous vos préférences</h3>
+                <form class="form-row" id="recForm">
+                    <div class="form-group">
+                        <label>Budget (€)</label>
+                        <input type="number" id="rec-budget" value="15" step="0.5" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Jour</label>
+                        <select id="rec-day" required>
+                            <option value="0">Lundi</option>
+                            <option value="1">Mardi</option>
+                            <option value="2">Mercredi</option>
+                            <option value="3">Jeudi</option>
+                            <option value="4">Vendredi</option>
+                            <option value="5">Samedi</option>
+                            <option value="6">Dimanche</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Température (°C)</label>
+                        <input type="number" id="rec-temp" value="20" step="0.1" required>
+                    </div>
+                    <button type="submit" class="btn-recommend">Recommander</button>
+                </form>
+            </div>
+
+            <div id="rec-results" style="display:none;">
+                <div class="section-title">
+                    <i class="fas fa-check"></i> Vos plats recommandés
+                </div>
+                <div class="products-grid" id="rec-products"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MENU PAGE -->
+    <div class="page" id="menu">
+        <div class="container">
+            <div class="section-title">
+                <i class="fas fa-book"></i> Notre Menu
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterMenu('Tous')">Tous</button>
+                <button class="filter-btn" onclick="filterMenu('Plat_du_jour')">Plats du Jour</button>
+                <button class="filter-btn" onclick="filterMenu('Grill')">Grill</button>
+                <button class="filter-btn" onclick="filterMenu('Entree')">Entrées</button>
+                <button class="filter-btn" onclick="filterMenu('Vegetarien')">Végétarien</button>
+                <button class="filter-btn" onclick="filterMenu('Dessert')">Desserts</button>
+                <button class="filter-btn" onclick="filterMenu('Boissons')">Boissons</button>
+            </div>
+
+            <div class="products-grid" id="menu-products"></div>
+        </div>
+    </div>
+
+    <!-- CART PAGE -->
+    <div class="page" id="cart">
+        <div class="container">
+            <div class="section-title">
+                <i class="fas fa-shopping-cart"></i> Votre Panier
+            </div>
+
+            <div id="cart-empty" class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Votre panier est vide</p>
+            </div>
+
+            <div id="cart-content" style="display:none;">
+                <div id="cart-items"></div>
+                <div class="cart-total">Total : <span id="cart-total">0.00</span> €</div>
+                <button class="btn-primary" onclick="goToCheckout()">Passer la commande</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHECKOUT PAGE -->
+    <div class="page" id="checkout">
+        <div class="container">
+            <div class="section-title">
+                <i class="fas fa-edit"></i> Vos informations
+            </div>
+
+            <form class="client-form" id="clientForm">
+                <div class="form-group">
+                    <label>Nom</label>
+                    <input type="text" id="client-name" required placeholder="Votre nom">
+                </div>
+                <div class="form-group">
+                    <label>Téléphone</label>
+                    <input type="tel" id="client-phone" required placeholder="06 XX XX XX XX">
+                </div>
+                <button type="submit" class="btn-primary">Confirmer la commande</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- CONFIRMATION PAGE -->
+    <div class="page" id="confirmation">
+        <div class="container">
+            <div class="confirmation">
+                <h2>✅ Commande Confirmée !</h2>
+                <p id="thank-you" style="font-size: 1.2em; margin-bottom: 30px;">Merci pour votre commande !</p>
+
+                <div class="ticket">
+                    <div class="ticket-header">
+                        <h3>Le Bon Plat</h3>
+                        <p>Ticket de Commande</p>
+                    </div>
+
+                    <div class="ticket-line">
+                        <span>N° Commande :</span>
+                        <span id="ticket-order" style="color: #FF9800; font-weight: 700;">--</span>
+                    </div>
+                    <div class="ticket-line">
+                        <span>Client :</span>
+                        <span id="ticket-name">--</span>
+                    </div>
+                    <div class="ticket-line">
+                        <span>Téléphone :</span>
+                        <span id="ticket-phone">--</span>
+                    </div>
+
+                    <div style="margin: 20px 0; padding: 20px 0; border-top: 1px solid #333; border-bottom: 1px solid #333;">
+                        <div style="margin-bottom: 15px; font-weight: 600;">Votre commande :</div>
+                        <div id="ticket-items"></div>
+                    </div>
+
+                    <div class="ticket-total">
+                        TOTAL : <span id="ticket-total">0.00</span> €
+                    </div>
+
+                    <button class="btn-print" onclick="window.print()">🖨️ Imprimer le ticket</button>
+                </div>
+
+                <button class="btn-primary" onclick="showPage('home')" style="margin-top: 30px; max-width: 300px;">Retour à l'accueil</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AVIS PAGE -->
+    <div class="page" id="reviews">
+        <div class="container">
+            <div class="section-title">⭐ Avis des Clients</div>
+
+            <!-- THANK YOU MESSAGE -->
+            <div style="text-align: center; margin-bottom: 50px; background: rgba(76, 175, 80, 0.1); padding: 40px 30px; border-radius: 15px; border: 2px solid #4CAF50;">
+                <h2 style="color: #4CAF50; font-size: 2em; margin-bottom: 15px;">✨ Merci pour votre avis! ✨</h2>
+                <p style="color: #000; font-size: 1.05em;">Votre avis nous aide à améliorer continuellement notre service et à vous offrir une meilleure expérience culinaire!</p>
+            </div>
+
+            <!-- FORM AVIS -->
+            <div style="background: #1a1a1a; padding: 30px; border-radius: 10px; margin-bottom: 40px; max-width: 500px; margin-left: auto; margin-right: auto;">
+                <h3 style="margin-bottom: 20px; color: #FF9800;">Laissez un avis</h3>
+                <form id="reviewForm" style="display: flex; flex-direction: column; gap: 15px;">
+                    <div>
+                        <label style="display: block; margin-bottom: 5px; font-size: 0.9em;">Votre nom:</label>
+                        <input type="text" id="reviewName" placeholder="Votre nom" required style="width: 100%; padding: 10px; background: #0f0f0f; border: 1px solid #333; color: #fff; border-radius: 5px;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 10px; font-size: 0.9em;">Note (1-10):</label>
+                        <input type="number" id="reviewRating" min="1" max="10" placeholder="Votre note (1-10)" required style="width: 100%; padding: 10px; background: #0f0f0f; border: 1px solid #333; color: #fff; border-radius: 5px; text-align: center; font-size: 1.1em;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 5px; font-size: 0.9em;">Votre commentaire:</label>
+                        <textarea id="reviewComment" placeholder="Partagez votre expérience..." required rows="4" style="width: 100%; padding: 10px; background: #0f0f0f; border: 1px solid #333; color: #fff; border-radius: 5px; resize: none;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Envoyer mon avis</button>
+                </form>
+            </div>
+
+            <!-- AVIS LIST -->
+            <div style="max-width: 600px; margin-left: auto; margin-right: auto;">
+                <h3 style="margin-bottom: 20px; color: #FF9800;">Avis des clients (<span id="reviews-count">0</span>)</h3>
+                <div id="reviews-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ===== STATE =====
+        const state = {
+            cart: JSON.parse(localStorage.getItem('cart')) || [],
+            allProducts: [],
+            currentFilter: 'Tous',
+            currentOrder: null
+        };
+
+        // ===== INIT =====
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProducts();
+            updateCartCount();
+            loadReviews();
+            document.getElementById('recForm').addEventListener('submit', handleRecommend);
+            document.getElementById('clientForm').addEventListener('submit', handleCheckout);
+            document.getElementById('reviewForm').addEventListener('submit', handleAddReview);
+        });
+
+        // ===== NAVIGATION =====
+        function showPage(page) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(page).classList.add('active');
+            if (page === 'menu') displayMenu();
+            if (page === 'cart') displayCart();
+        }
+
+        // ===== PRODUCTS =====
+        async function loadProducts() {
+            try {
+                const response = await fetch('/api/menu');
+                const data = await response.json();
+                state.allProducts = data.products || [];
+                displayFeatured();
+                displayMenu();
+            } catch (error) {
+                console.error('Erreur:', error);
+            }
+        }
+
+        function displayFeatured() {
+            const container = document.getElementById('featured-products');
+            container.innerHTML = state.allProducts.slice(0, 6).map(p => createCard(p)).join('');
+        }
+
+        function displayMenu() {
+            const container = document.getElementById('menu-products');
+            let products = state.allProducts;
+            if (state.currentFilter !== 'Tous') {
+                products = products.filter(p => p.category === state.currentFilter);
+            }
+            container.innerHTML = products.map(p => createCard(p)).join('');
+        }
+
+        function createCard(product) {
+            const image = product.image || getProductImage(product.name, product.category);
+            return `
+                <div class="product-card">
+                    <img src="${image}" alt="${product.name}" class="product-image" >
+                    <div class="product-info">
+                        <div class="product-name">${product.name}</div>
+                        <div class="product-category">${product.category.replace(/_/g, ' ')}</div>
+                        <div class="product-price">${product.price.toFixed(2)}€</div>
+                        <button class="btn-add" onclick="addToCart(${product.id})">Ajouter au panier</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function getProductImage(name, category) {
+            const images = {
+                'Pates Carbonara': 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=300&h=300&fit=crop',
+                'Burger Maison': 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&h=300&fit=crop',
+                'Salade Cesar': 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300&h=300&fit=crop',
+                'Cotes d\'agneau': 'https://images.unsplash.com/photo-1555939594-58d7cb561404?w=300&h=300&fit=crop',
+                'Poulet roti frites': 'https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=300&h=300&fit=crop',
+                'Brochettes mixtes': 'https://images.unsplash.com/photo-1599599810694-b5ac4dd8b11e?w=300&h=300&fit=crop',
+                'Buddha bowl': 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300&h=300&fit=crop',
+                'Fondant chocolat': 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&h=300&fit=crop',
+                'Tiramisu': 'https://images.unsplash.com/photo-1571115764595-644a007f0a60?w=300&h=300&fit=crop',
+            };
+
+            if (images[name]) return images[name];
+            if (category === 'Boissons') return 'https://images.unsplash.com/photo-1554866585-acbb2231f1d7?w=300&h=300&fit=crop';
+            if (category === 'Dessert') return 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&h=300&fit=crop';
+            if (category === 'Grill') return 'https://images.unsplash.com/photo-1555939594-58d7cb561404?w=300&h=300&fit=crop';
+            if (category === 'Entree') return 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300&h=300&fit=crop';
+            return 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&h=300&fit=crop';
+        }
+
+        function filterMenu(category) {
+            state.currentFilter = category;
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            displayMenu();
+        }
+
+        // ===== CART =====
+        function addToCart(productId) {
+            const product = state.allProducts.find(p => p.id === productId);
+            if (!product) return;
+            const existing = state.cart.find(i => i.id === productId);
+            if (existing) existing.quantity++;
+            else state.cart.push({...product, quantity: 1});
+            saveCart();
+            updateCartCount();
+        }
+
+        function removeFromCart(productId) {
+            state.cart = state.cart.filter(i => i.id !== productId);
+            saveCart();
+            displayCart();
+            updateCartCount();
+        }
+
+        function updateQty(productId, change) {
+            const item = state.cart.find(i => i.id === productId);
+            if (!item) return;
+            item.quantity += change;
+            if (item.quantity <= 0) removeFromCart(productId);
+            else { saveCart(); displayCart(); }
+        }
+
+        function displayCart() {
+            const empty = document.getElementById('cart-empty');
+            const content = document.getElementById('cart-content');
+            const container = document.getElementById('cart-items');
+
+            if (state.cart.length === 0) {
+                empty.style.display = 'block';
+                content.style.display = 'none';
+                return;
+            }
+
+            empty.style.display = 'none';
+            content.style.display = 'block';
+
+            container.innerHTML = state.cart.map(item => {
+                const image = getProductImage(item.name, item.category);
+                return `
+                    <div class="cart-item">
+                        <img src="${image}" alt="${item.name}" class="cart-item-image" onerror="this.src='https://via.placeholder.com/60?text=${item.category}'">
+                        <div class="cart-item-info">
+                            <div class="cart-item-name">${item.name}</div>
+                            <div class="cart-item-price">${item.price.toFixed(2)}€</div>
+                        </div>
+                        <div class="cart-controls">
+                            <button class="qty-btn" onclick="updateQty(${item.id}, -1)">−</button>
+                            <div class="qty-display">${item.quantity}</div>
+                            <button class="qty-btn" onclick="updateQty(${item.id}, 1)">+</button>
+                            <button class="btn-remove" onclick="removeFromCart(${item.id})">Supprimer</button>
+                            <div style="min-width: 80px; text-align: right; color: #FF9800; font-weight: 600;">${(item.price * item.quantity).toFixed(2)}€</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            const total = state.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            document.getElementById('cart-total').textContent = total.toFixed(2);
+        }
+
+        function saveCart() {
+            localStorage.setItem('cart', JSON.stringify(state.cart));
+        }
+
+        function updateCartCount() {
+            const count = state.cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cart-count').textContent = count;
+        }
+
+        function goToCheckout() {
+            if (state.cart.length === 0) {
+                alert('Panier vide !');
+                return;
+            }
+            showPage('checkout');
+        }
+
+        // ===== RECOMMENDATION =====
+        async function handleRecommend(e) {
+            e.preventDefault();
+            const budget = parseFloat(document.getElementById('rec-budget').value);
+            const day = parseInt(document.getElementById('rec-day').value);
+            const temp = parseFloat(document.getElementById('rec-temp').value);
+
+            try {
+                const response = await fetch('/api/recommendations', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ temperature: temp, budget, month: 8, day })
+                });
+                const data = await response.json();
+                if (data.statut === 'erreur') throw new Error(data.erreur);
+
+                const container = document.getElementById('rec-products');
+                if (data.recommended_products && data.recommended_products.length > 0) {
+                    container.innerHTML = data.recommended_products.map(p => createCard(p)).join('');
+                } else {
+                    container.innerHTML = '<p style="color: #aaa;">Aucun plat trouvé</p>';
+                }
+                document.getElementById('rec-results').style.display = 'block';
+            } catch (error) {
+                alert('Erreur: ' + error.message);
+            }
+        }
+
+        // ===== CHECKOUT =====
+        async function handleCheckout(e) {
+            e.preventDefault();
+            const name = document.getElementById('client-name').value;
+            const phone = document.getElementById('client-phone').value;
+
+            state.currentOrder = {
+                id: '#' + Math.random().toString(36).substr(2, 9).toUpperCase(),
+                name,
+                phone,
+                items: state.cart,
+                total: state.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0),
+                date: new Date().toLocaleString('fr-FR')
+            };
+
+            displayConfirmation();
+            showPage('confirmation');
+
+            state.cart = [];
+            saveCart();
+            updateCartCount();
+        }
+
+        function displayConfirmation() {
+            const order = state.currentOrder;
+            document.getElementById('thank-you').textContent = `Merci ${order.name} !`;
+            document.getElementById('ticket-order').textContent = order.id;
+            document.getElementById('ticket-name').textContent = order.name;
+            document.getElementById('ticket-phone').textContent = order.phone;
+
+            const itemsHtml = order.items.map(item => `
+                <div class="ticket-line-product">
+                    <span>${item.name} × ${item.quantity}</span>
+                    <span>${(item.price * item.quantity).toFixed(2)}€</span>
+                </div>
+            `).join('');
+            document.getElementById('ticket-items').innerHTML = itemsHtml;
+            document.getElementById('ticket-total').textContent = order.total.toFixed(2);
+        }
+
+        // ===== AVIS =====
+        async function loadReviews() {
+            try {
+                const response = await fetch('/api/reviews');
+                const data = await response.json();
+                displayReviews(data.reviews);
+            } catch (error) {
+                console.error('Erreur:', error);
+            }
+        }
+
+        function displayReviews(reviews) {
+            const container = document.getElementById('reviews-container');
+            document.getElementById('reviews-count').textContent = reviews.length;
+
+            if (reviews.length === 0) {
+                container.innerHTML = '<p style="color: #aaa; text-align: center;">Aucun avis pour le moment. Soyez le premier!</p>';
+                return;
+            }
+
+            container.innerHTML = reviews.map(review => `
+                <div style="background: #1a1a1a; padding: 20px; border-radius: 10px; margin-bottom: 15px; border-left: 4px solid #FF9800;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <strong>${review.name}</strong>
+                        <span style="color: #aaa; font-size: 0.8em;">${review.date}</span>
+                    </div>
+                    <div style="color: #FF9800; margin-bottom: 10px; font-size: 1.1em;">
+                        ⭐ Note: <strong>${review.rating}/10</strong>
+                    </div>
+                    <p style="color: #ccc; margin: 0;">${review.comment}</p>
+                </div>
+            `).join('');
+        }
+
+        async function handleAddReview(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('reviewName').value;
+            const rating = parseInt(document.getElementById('reviewRating').value);
+            const comment = document.getElementById('reviewComment').value;
+
+            try {
+                const response = await fetch('/api/reviews', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, rating: parseInt(rating), comment })
+                });
+
+                if (response.ok) {
+                    document.getElementById('reviewForm').reset();
+                    loadReviews();
+                    alert('✅ Avis ajouté avec succès! Merci!');
+                } else {
+                    alert('❌ Erreur lors de l\'ajout de l\'avis');
+                }
+            } catch (error) {
+                console.error('Erreur:', error);
+                alert('Erreur réseau');
+            }
+        }
+
+    </script>
+</body>
+</html>

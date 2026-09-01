@@ -1,0 +1,13 @@
+drink_name,category,price,size_ml,is_available,source
+Coca Cola,Soda,2.5,330,1,beverages
+Fanta Orange,Soda,2.3,330,1,beverages
+Dada,Soda,2.0,330,1,beverages
+Sprite,Soda,2.5,330,1,beverages
+Hawi,Boisson Energisante,3.0,250,1,beverages
+Oasis,Jus/Nectar,2.8,330,1,beverages
+Eau Minerale,Eau,1.5,500,1,beverages
+Jus d'Orange Frais,Jus Frais,3.5,250,1,beverages
+Pepsi,Soda,2.3,330,1,beverages
+Orangena,Jus/Nectar,2.5,330,1,beverages
+Jus de Pomme,Jus/Nectar,2.8,250,1,beverages
+The Glace,Boisson Chaude,2.2,250,0,beverages

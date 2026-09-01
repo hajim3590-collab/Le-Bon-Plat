@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Le Bon Plat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f0f0f;
+            color: #fff;
+        }
+
+        .admin-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .admin-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+
+        .admin-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #FF9800;
+        }
+
+        .admin-header p {
+            color: #aaa;
+            font-size: 0.9em;
+        }
+
+        /* LOGIN FORM */
+        .login-form {
+            background: #1a1a1a;
+            border: 1px solid #FF9800;
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 400px;
+            margin: 0 auto;
+            display: none;
+        }
+
+        .login-form.show {
+            display: block;
+        }
+
+        .login-form h2 {
+            margin-bottom: 20px;
+            color: #FF9800;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            background: #2a2a2a;
+            border: 1px solid #444;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .login-form input:focus {
+            outline: none;
+            border-color: #FF9800;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 12px;
+            background: #FF9800;
+            color: #0f0f0f;
+            border: none;
+            border-radius: 5px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .login-form button:hover {
+            background: #ffa500;
+        }
+
+        .error-message {
+            color: #ff4444;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 68, 68, 0.1);
+            border-radius: 5px;
+            text-align: center;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        /* MONITORING DASHBOARD */
+        .monitoring-dashboard {
+            display: none;
+        }
+
+        .monitoring-dashboard.show {
+            display: block;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: #1a1a1a;
+            border: 1px solid #FF9800;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-card .value {
+            font-size: 2.5em;
+            color: #FF9800;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .stat-card .label {
+            color: #aaa;
+            font-size: 0.9em;
+        }
+
+        .stat-card.error .value {
+            color: #ff4444;
+        }
+
+        .stat-card.success .value {
+            color: #4CAF50;
+        }
+
+        /* LOGS CONTAINER */
+        .logs-container {
+            background: #1a1a1a;
+            border: 1px solid #FF9800;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .logs-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #444;
+        }
+
+        .logs-header h2 {
+            color: #FF9800;
+        }
+
+        .refresh-btn {
+            background: #FF9800;
+            color: #0f0f0f;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: background 0.3s;
+        }
+
+        .refresh-btn:hover {
+            background: #ffa500;
+        }
+
+        .logs-list {
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .log-entry {
+            background: #0f0f0f;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-left: 4px solid #444;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            line-height: 1.5;
+        }
+
+        .log-entry.info {
+            border-left-color: #2196F3;
+            color: #2196F3;
+        }
+
+        .log-entry.success {
+            border-left-color: #4CAF50;
+            color: #4CAF50;
+        }
+
+        .log-entry.warning {
+            border-left-color: #FF9800;
+            color: #FF9800;
+        }
+
+        .log-entry.error {
+            border-left-color: #ff4444;
+            color: #ff4444;
+        }
+
+        .logout-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #FF9800;
+            color: #0f0f0f;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .logout-btn:hover {
+            background: #ffa500;
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- LOGOUT BUTTON -->
+    <button class="logout-btn" onclick="logout()" style="display: none;" id="logoutBtn">
+        Déconnexion
+    </button>
+
+    <!-- LOGIN FORM -->
+    <div class="admin-container">
+        <div class="admin-header">
+            <h1>🔐 Admin Dashboard</h1>
+            <p>Surveillance de l'application en temps réel</p>
+        </div>
+
+        <div class="login-form show" id="loginForm">
+            <h2>Authentification</h2>
+            <div class="error-message" id="errorMessage"></div>
+            <input type="password" id="adminKey" placeholder="Clé Admin" />
+            <button onclick="login()">Connexion</button>
+        </div>
+
+        <!-- MONITORING DASHBOARD -->
+        <div class="monitoring-dashboard" id="dashboard">
+            <!-- STATS -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="value" id="totalLogs">-</div>
+                    <div class="label">Logs Totals</div>
+                </div>
+                <div class="stat-card error">
+                    <div class="value" id="errorCount">-</div>
+                    <div class="label">Erreurs</div>
+                </div>
+                <div class="stat-card success">
+                    <div class="value" id="appStatus">-</div>
+                    <div class="label">État App</div>
+                </div>
+            </div>
+
+            <!-- LOGS -->
+            <div class="logs-container">
+                <div class="logs-header">
+                    <h2>📋 Logs en direct</h2>
+                    <button class="refresh-btn" onclick="loadLogs()">
+                        <i class="fas fa-sync-alt"></i> Rafraîchir
+                    </button>
+                </div>
+                <div class="logs-list" id="logsList">
+                    <div class="log-entry info">Chargement...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ADMIN_KEY = "monitoring_2024_secure";
+        let isAuthenticated = false;
+        let autoRefreshInterval = null;
+
+        // LOGIN
+        function login() {
+            const keyInput = document.getElementById('adminKey').value;
+            const errorMsg = document.getElementById('errorMessage');
+
+            if (keyInput === ADMIN_KEY) {
+                isAuthenticated = true;
+                document.getElementById('loginForm').classList.remove('show');
+                document.getElementById('dashboard').classList.add('show');
+                document.getElementById('logoutBtn').style.display = 'block';
+                errorMsg.classList.remove('show');
+
+                loadLogs();
+                // Auto-refresh tous les 5 secondes
+                autoRefreshInterval = setInterval(loadLogs, 5000);
+            } else {
+                errorMsg.textContent = '❌ Clé admin incorrecte';
+                errorMsg.classList.add('show');
+            }
+        }
+
+        // LOGOUT
+        function logout() {
+            isAuthenticated = false;
+            document.getElementById('loginForm').classList.add('show');
+            document.getElementById('dashboard').classList.remove('show');
+            document.getElementById('logoutBtn').style.display = 'none';
+            document.getElementById('adminKey').value = '';
+            clearInterval(autoRefreshInterval);
+        }
+
+        // LOAD LOGS
+        async function loadLogs() {
+            if (!isAuthenticated) return;
+
+            try {
+                const response = await fetch(`/admin/logs?key=${ADMIN_KEY}`);
+                const data = await response.json();
+
+                if (!response.ok) {
+                    console.error('Erreur:', data.error);
+                    return;
+                }
+
+                displayLogs(data.logs);
+                updateStats(data.logs);
+            } catch (error) {
+                console.error('Erreur lors du chargement des logs:', error);
+            }
+        }
+
+        // DISPLAY LOGS
+        function displayLogs(logs) {
+            const logsList = document.getElementById('logsList');
+            logsList.innerHTML = '';
+
+            logs.reverse().forEach(log => {
+                const entry = document.createElement('div');
+                entry.className = 'log-entry';
+
+                // Détecter le type de log
+                if (log.includes('❌') || log.includes('ERREUR') || log.includes('Error')) {
+                    entry.classList.add('error');
+                } else if (log.includes('⚠️') || log.includes('WARNING')) {
+                    entry.classList.add('warning');
+                } else if (log.includes('✓') || log.includes('200') || log.includes('201')) {
+                    entry.classList.add('success');
+                } else if (log.includes('📥') || log.includes('📤') || log.includes('INFO')) {
+                    entry.classList.add('info');
+                }
+
+                entry.textContent = log;
+                logsList.appendChild(entry);
+            });
+        }
+
+        // UPDATE STATS
+        function updateStats(logs) {
+            document.getElementById('totalLogs').textContent = logs.length;
+
+            const errorCount = logs.filter(log =>
+                log.includes('❌') || log.includes('Error') || log.includes('ERREUR')
+            ).length;
+            document.getElementById('errorCount').textContent = errorCount;
+
+            const status = errorCount === 0 ? '✓ OK' : `⚠️ ${errorCount} erreurs`;
+            document.getElementById('appStatus').textContent = status;
+        }
+
+        // ENTER pour se connecter
+        document.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && !isAuthenticated) {
+                login();
+            }
+        });
+    </script>
+</body>
+</html>

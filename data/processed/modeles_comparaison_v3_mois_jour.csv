@@ -1,0 +1,5 @@
+Modèle,Accuracy,Precision,Recall,F1-Score,Temps (s)
+Naive Bayes,0.6844,0.6557,0.6844,0.6676,0.0042
+Decision Tree,0.8533,0.8427,0.8533,0.8445,0.0102
+Random Forest,0.9052,0.9002,0.9052,0.8931,0.2554
+Logistic Regression,0.7007,0.6739,0.7007,0.6799,0.6938

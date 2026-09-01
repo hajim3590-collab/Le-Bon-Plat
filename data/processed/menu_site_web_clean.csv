@@ -1,0 +1,12 @@
+dish_name,category,price,currency,source
+Salade Cesar,Entree,8.5,EUR,web
+Soupe a l'oignon,Entree,6.0,EUR,web
+Carpaccio de boeuf,Entree,9.9,EUR,web
+Poulet roti frites,Plat_du_jour,14.5,EUR,web
+Pates bolognaise,Plat_du_jour,13.0,EUR,web
+Entrecote grillee,Grill,22.0,EUR,web
+Brochettes mixtes,Grill,19.5,EUR,web
+Buddha bowl legumes,Vegetarien,13.5,EUR,web
+Tarte tatin,Dessert,6.0,EUR,web
+Fondant chocolat,Dessert,7.0,EUR,web
+Menu burger enfant,Enfant,9.0,EUR,web

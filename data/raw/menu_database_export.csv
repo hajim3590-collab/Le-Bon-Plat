@@ -1,0 +1,16 @@
+item_id,item_name,category_code,price_cents,is_active
+1,Salade Cesar,ENT,850,1
+2,Soupe a l'oignon,ENT,600,1
+3,Tartare de saumon,ENT,1100,1
+4,Poulet roti frites,PDJ,1450,1
+5,Risotto aux champignons,PDJ,1500,1
+6,Pates bolognaise,PDJ,1300,1
+7,Entrecote grillee,GRL,2200,1
+8,Cotes d'agneau,GRL,2400,1
+9,Burger maison (ancienne recette),PDJ,1200,0
+10,Curry de legumes,VEG,1200,1
+11,Galette de quinoa,VEG,1100,1
+12,Tiramisu,DES,650,1
+13,Tarte tatin,DES,600,1
+14,Menu nuggets,ENF,850,1
+15,Menu pates enfant,ENF,800,1

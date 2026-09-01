@@ -1,0 +1,268 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Brochettes mixtes",
+      "category": "Grill",
+      "price": 20.0,
+      "description": "Brochettes mixtes délicieuses",
+      "image": "/images/Brochettes mixtes.png"
+    },
+    {
+      "id": 2,
+      "name": "Buddha bowl",
+      "category": "Vegetarien",
+      "price": 14.0,
+      "description": "Buddha bowl riche en légumes",
+      "image": "/images/Buddha bowl legumes.png"
+    },
+    {
+      "id": 3,
+      "name": "Burger maison",
+      "category": "Plat_du_jour",
+      "price": 12.0,
+      "description": "Burger maison savoureux",
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400"
+    },
+    {
+      "id": 4,
+      "name": "Carpaccio de boeuf",
+      "category": "Entree",
+      "price": 9.9,
+      "description": "Carpaccio de boeuf frais",
+      "image": "/images/Carpaccio de boeuf.png"
+    },
+    {
+      "id": 5,
+      "name": "Cotes d'agneau",
+      "category": "Grill",
+      "price": 24.0,
+      "description": "Côtes d'agneau grillées",
+      "image": "/images/Cotes d'agneau.png"
+    },
+    {
+      "id": 6,
+      "name": "Curry de legumes",
+      "category": "Vegetarien",
+      "price": 12.0,
+      "description": "Curry de légumes savoureux",
+      "image": "/images/Curry de legumes.png"
+    },
+    {
+      "id": 7,
+      "name": "Entrecote grillee",
+      "category": "Grill",
+      "price": 22.0,
+      "description": "Entrecôte grillée savoureuse",
+      "image": "/images/Entrecote grillee.png"
+    },
+    {
+      "id": 8,
+      "name": "Fondant chocolat",
+      "category": "Dessert",
+      "price": 7.0,
+      "description": "Fondant au chocolat gourmand",
+      "image": "/images/Fondant chocolat.png"
+    },
+    {
+      "id": 9,
+      "name": "Galette de quinoa",
+      "category": "Vegetarien",
+      "price": 11.0,
+      "description": "Galette de quinoa nutritive",
+      "image": "/images/Galette de quinoa.png"
+    },
+    {
+      "id": 10,
+      "name": "Menu burger enfant",
+      "category": "Menu_Enfant",
+      "price": 8.5,
+      "description": "Menu enfant avec burger",
+      "image": "/images/Menu burger enfant.png"
+    },
+    {
+      "id": 11,
+      "name": "Menu nuggets",
+      "category": "Menu_Enfant",
+      "price": 8.5,
+      "description": "Menu enfant avec nuggets",
+      "image": "/images/Menu nuggets enfant.png"
+    },
+    {
+      "id": 12,
+      "name": "Menu pates enfant",
+      "category": "Menu_Enfant",
+      "price": 8.0,
+      "description": "Menu enfant avec pâtes",
+      "image": "/images/Menu pates enfant.png"
+    },
+    {
+      "id": 13,
+      "name": "Pates bolognaise",
+      "category": "Plat_du_jour",
+      "price": 13.0,
+      "description": "Pâtes bolognaise délicieuses",
+      "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400"
+    },
+    {
+      "id": 14,
+      "name": "Poulet roti frites",
+      "category": "Plat_du_jour",
+      "price": 14.5,
+      "description": "Poulet rôti avec frites",
+      "image": "/images/Poulet roti frites.png"
+    },
+    {
+      "id": 15,
+      "name": "Risotto aux champignons",
+      "category": "Plat_du_jour",
+      "price": 15.0,
+      "description": "Risotto aux champignons",
+      "image": "/images/Risotto aux champignons.png"
+    },
+    {
+      "id": 16,
+      "name": "Salade Cesar",
+      "category": "Entree",
+      "price": 8.5,
+      "description": "Salade César fraîche",
+      "image": "/images/Salade Cesar.png"
+    },
+    {
+      "id": 17,
+      "name": "Soupe a l'oignon",
+      "category": "Entree",
+      "price": 6.0,
+      "description": "Soupe à l'oignon gratinée",
+      "image": "/images/Soupe a l'oignon.png"
+    },
+    {
+      "id": 18,
+      "name": "Soupe du jour",
+      "category": "Entree",
+      "price": 5.5,
+      "description": "Soupe du jour maison",
+      "image": "/images/Soupe du jour.png"
+    },
+    {
+      "id": 19,
+      "name": "Tartare de saumon",
+      "category": "Entree",
+      "price": 11.0,
+      "description": "Tartare de saumon frais",
+      "image": "/images/Tartare de saumon.png"
+    },
+    {
+      "id": 20,
+      "name": "Tarte tatin",
+      "category": "Dessert",
+      "price": 6.0,
+      "description": "Tarte Tatin croustillante",
+      "image": "/images/Tarte tatin.png"
+    },
+    {
+      "id": 21,
+      "name": "Tiramisu",
+      "category": "Dessert",
+      "price": 6.5,
+      "description": "Tiramisu authentique",
+      "image": "/images/Tiramisu.png"
+    },
+    {
+      "id": 22,
+      "name": "7up",
+      "category": "Boissons",
+      "price": 2.5,
+      "description": "Coca Cola fraîche",
+      "image": "/images/7up.png"
+    },
+    {
+      "id": 23,
+      "name": "Coca Cherry",
+      "category": "Boissons",
+      "price": 2.5,
+      "description": "Eau pétillante rafraîchissante",
+      "image": "/images/coca cherry.png"
+    },
+    {
+      "id": 24,
+      "name": "Coca Zero",
+      "category": "Boissons",
+      "price": 2.5,
+      "description": "Eau plate",
+      "image": "/images/coca zero.png"
+    },
+    {
+      "id": 25,
+      "name": "Eau gazeuse San Pellegrino",
+      "category": "Boissons",
+      "price": 2.5,
+      "description": "Fanta Orange",
+      "image": "/images/Eau gazeuse San Pellegrino.png"
+    },
+    {
+      "id": 26,
+      "name": "Eau plate",
+      "category": "Boissons",
+      "price": 1.0,
+      "description": "Jus d'orange frais",
+      "image": "/images/eau.png"
+    },
+    {
+      "id": 27,
+      "name": "Fanta Orange",
+      "category": "Boissons",
+      "price": 2.5,
+      "description": "Limonade maison",
+      "image": "/images/fanta orange.png"
+    },
+    {
+      "id": 28,
+      "name": "Jus d'orange",
+      "category": "Boissons",
+      "price": 2.5,
+      "description": "Thé glacé",
+      "image": "/images/jus d'orange.png"
+    },
+    {
+      "id": 29,
+      "name": "Lipton Ice Tea",
+      "category": "Boissons",
+      "price": 2.5,
+      "description": "Café chaud",
+      "image": "/images/lipton.png"
+    },
+    {
+      "id": 30,
+      "name": "Pepsi Zero",
+      "category": "Boissons",
+      "price": 2.5,
+      "description": "Milkshake à la vanille",
+      "image": "/images/pepsi zero.png"
+    },
+    {
+      "id": 31,
+      "name": "Pepsi",
+      "category": "Boissons",
+      "price": 2.5,
+      "description": "Milkshake au chocolat",
+      "image": "/images/pepsi.png"
+    },
+    {
+      "id": 32,
+      "name": "Café",
+      "category": "Boissons",
+      "price": 2.5,
+      "description": "Café chaud délicieux",
+      "image": "/images/cafe.png"
+    },
+    {
+      "id": 33,
+      "name": "Smoothie tropical",
+      "category": "Boissons",
+      "price": 2.5,
+      "description": "Smoothie tropical frais",
+      "image": "/images/smoothie tropical.png"
+    }
+  ]
+}

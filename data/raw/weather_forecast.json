@@ -1,0 +1,11 @@
+{
+  "source": "simulation_open_meteo_like",
+  "note": "En production ce fichier serait remplace par un appel a une API meteo publique (ex. Open-Meteo). Ici : jeu d'exemple pour permettre a la pipeline de tourner hors-ligne.",
+  "forecast": [
+    {"date": "2025-09-15", "temperature_c": 18.4, "precipitation_mm": 0.0},
+    {"date": "2025-09-16", "temperature_c": 21.1, "precipitation_mm": 2.3},
+    {"date": "2025-09-17", "temperature_c": 9.8, "precipitation_mm": 5.6},
+    {"date": "2025-09-18", "temperature_c": 24.2, "precipitation_mm": 0.0},
+    {"date": "2025-09-19", "temperature_c": 15.0, "precipitation_mm": 1.1}
+  ]
+}

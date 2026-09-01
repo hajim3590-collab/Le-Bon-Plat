@@ -1,0 +1,16 @@
+dish_name,category,price,currency,source
+Salade Cesar,Entree,8.5,EUR,database
+Soupe a l'oignon,Entree,6.0,EUR,database
+Tartare de saumon,Entree,11.0,EUR,database
+Poulet roti frites,Plat_du_jour,14.5,EUR,database
+Risotto aux champignons,Plat_du_jour,15.0,EUR,database
+Pates bolognaise,Plat_du_jour,13.0,EUR,database
+Entrecote grillee,Grill,22.0,EUR,database
+Cotes d'agneau,Grill,24.0,EUR,database
+Burger maison (ancienne recette),Plat_du_jour,12.0,EUR,database
+Curry de legumes,Vegetarien,12.0,EUR,database
+Galette de quinoa,Vegetarien,11.0,EUR,database
+Tiramisu,Dessert,6.5,EUR,database
+Tarte tatin,Dessert,6.0,EUR,database
+Menu nuggets,Enfant,8.5,EUR,database
+Menu pates enfant,Enfant,8.0,EUR,database

@@ -1,0 +1,171 @@
+2026-08-26 17:26:50,360 - INFO - ================================================================================
+2026-08-26 17:26:50,390 - INFO - ================================================================================
+2026-08-26 17:26:50,472 - WARNING -  * Debugger is active!
+2026-08-26 17:26:50,486 - INFO -  * Debugger PIN: 141-974-715
+2026-08-26 17:26:55,485 - INFO -  * Detected change in 'C:\\Users\\MonPC\\Desktop\\projet PFE\\backend\\app.py', reloading
+2026-08-26 17:27:00,212 - INFO - ================================================================================
+2026-08-26 17:27:00,218 - INFO - ================================================================================
+2026-08-26 17:27:00,267 - WARNING -  * Debugger is active!
+2026-08-26 17:27:00,278 - INFO -  * Debugger PIN: 141-974-715
+2026-08-26 17:32:03,079 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:03] "GET / HTTP/1.1" 200 -
+2026-08-26 17:32:03,201 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:03] "GET /api/menu HTTP/1.1" 200 -
+2026-08-26 17:32:03,348 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:03] "GET /api/reviews HTTP/1.1" 200 -
+2026-08-26 17:32:03,788 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:03] "[36mGET /images/Brochettes%20mixtes.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:03,793 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:03] "[36mGET /images/Buddha%20bowl%20legumes.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:03,797 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:03] "[36mGET /images/Curry%20de%20legumes.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:03,800 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:03] "[36mGET /images/Carpaccio%20de%20boeuf.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:03,803 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:03] "[36mGET /images/Cotes%20d'agneau.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:03,809 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:03] "[36mGET /images/Entrecote%20grillee.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:04,176 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:04] "[36mGET /images/Fondant%20chocolat.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:04,181 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:04] "[36mGET /images/Menu%20nuggets%20enfant.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:04,185 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:04] "[36mGET /images/Galette%20de%20quinoa.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:04,190 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:04] "[36mGET /images/Menu%20pates%20enfant.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:04,195 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:04] "[36mGET /images/Poulet%20roti%20frites.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:04,199 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:04] "[36mGET /images/Menu%20burger%20enfant.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:04,600 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:04] "[36mGET /images/Risotto%20aux%20champignons.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:04,605 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:04] "[36mGET /images/Salade%20Cesar.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:04,611 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:04] "[36mGET /images/Soupe%20a%20l'oignon.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:04,615 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:04] "[36mGET /images/Soupe%20du%20jour.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:04,618 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:04] "[36mGET /images/Tartare%20de%20saumon.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:04,624 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:04] "[36mGET /images/Tarte%20tatin.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:05,010 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:05] "[36mGET /images/Tiramisu.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:05,014 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:05] "[36mGET /images/coca%20cherry.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:05,017 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:05] "[36mGET /images/7up.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:05,022 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:05] "[36mGET /images/coca%20zero.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:05,027 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:05] "[36mGET /images/Eau%20gazeuse%20San%20Pellegrino.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:05,031 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:05] "[36mGET /images/eau.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:05,484 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:05] "[36mGET /images/fanta%20orange.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:05,497 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:05] "[36mGET /images/jus%20d'orange.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:05,501 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:05] "[36mGET /images/lipton.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:05,506 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:05] "[36mGET /images/pepsi%20zero.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:05,510 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:05] "[36mGET /images/pepsi.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:05,514 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:05] "[36mGET /images/cafe.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:05,855 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:05] "[36mGET /images/smoothie%20tropical.png HTTP/1.1[0m" 304 -
+2026-08-26 17:32:06,311 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:06] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:32:08,168 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:08] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:32:13,490 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:13] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:32:18,173 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:18] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:32:23,469 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:23] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:32:28,177 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:28] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:32:33,482 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:33] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:32:38,451 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:38] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:32:43,483 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:43] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:32:48,454 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:48] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:32:53,759 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:53] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:32:58,446 - INFO - 127.0.0.1 - - [26/Aug/2026 17:32:58] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:33:03,753 - INFO - 127.0.0.1 - - [26/Aug/2026 17:33:03] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:33:08,454 - INFO - 127.0.0.1 - - [26/Aug/2026 17:33:08] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:33:13,755 - INFO - 127.0.0.1 - - [26/Aug/2026 17:33:13] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:33:18,449 - INFO - 127.0.0.1 - - [26/Aug/2026 17:33:18] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:33:23,764 - INFO - 127.0.0.1 - - [26/Aug/2026 17:33:23] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:33:28,449 - INFO - 127.0.0.1 - - [26/Aug/2026 17:33:28] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:33:33,766 - INFO - 127.0.0.1 - - [26/Aug/2026 17:33:33] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:33:38,451 - INFO - 127.0.0.1 - - [26/Aug/2026 17:33:38] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:33:43,760 - INFO - 127.0.0.1 - - [26/Aug/2026 17:33:43] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:34:19,448 - INFO - 127.0.0.1 - - [26/Aug/2026 17:34:19] "GET /api/logs HTTP/1.1" 200 -
+2026-08-26 17:34:54,408 - INFO -  * Detected change in 'C:\\Users\\MonPC\\Desktop\\projet PFE\\backend\\app.py', reloading
+2026-08-26 17:35:00,724 - INFO - ================================================================================
+2026-08-26 17:35:00,734 - INFO - ================================================================================
+2026-08-26 17:35:00,782 - WARNING -  * Debugger is active!
+2026-08-26 17:35:00,789 - INFO -  * Debugger PIN: 141-974-715
+2026-08-26 17:35:19,791 - INFO - 127.0.0.1 - - [26/Aug/2026 17:35:19] "[35m[1mGET /api/logs HTTP/1.1[0m" 500 -
+2026-08-26 17:36:19,316 - INFO -  * Detected change in 'C:\\Users\\MonPC\\Desktop\\projet PFE\\backend\\app.py', reloading
+2026-08-26 17:36:23,750 - INFO - ================================================================================
+2026-08-26 17:36:23,760 - INFO - ================================================================================
+2026-08-26 17:36:23,796 - WARNING -  * Debugger is active!
+2026-08-26 17:36:23,803 - INFO -  * Debugger PIN: 141-974-715
+2026-08-26 17:36:23,958 - INFO - 127.0.0.1 - - [26/Aug/2026 17:36:23] "[35m[1mGET /api/logs HTTP/1.1[0m" 500 -
+2026-08-26 17:37:11,107 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:11] "[35m[1mGET /api/logs HTTP/1.1[0m" 500 -
+2026-08-26 17:37:13,159 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:13] "GET / HTTP/1.1" 200 -
+2026-08-26 17:37:13,229 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:13] "[35m[1mGET /api/logs HTTP/1.1[0m" 500 -
+2026-08-26 17:37:13,315 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:13] "GET /api/menu HTTP/1.1" 200 -
+2026-08-26 17:37:13,539 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:13] "GET /api/reviews HTTP/1.1" 200 -
+2026-08-26 17:37:13,681 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:13] "[36mGET /images/Brochettes%20mixtes.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:13,687 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:13] "[36mGET /images/Buddha%20bowl%20legumes.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:13,692 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:13] "[36mGET /images/Carpaccio%20de%20boeuf.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:13,696 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:13] "[36mGET /images/Cotes%20d'agneau.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:13,699 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:13] "[36mGET /images/Curry%20de%20legumes.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:13,874 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:13] "[36mGET /images/Entrecote%20grillee.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:14,061 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:14] "[36mGET /images/Fondant%20chocolat.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:14,068 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:14] "[36mGET /images/Galette%20de%20quinoa.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:14,074 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:14] "[36mGET /images/Menu%20burger%20enfant.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:14,079 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:14] "[36mGET /images/Menu%20nuggets%20enfant.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:14,086 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:14] "[36mGET /images/Menu%20pates%20enfant.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:14,209 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:14] "[36mGET /images/Poulet%20roti%20frites.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:14,460 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:14] "[36mGET /images/Risotto%20aux%20champignons.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:14,464 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:14] "[36mGET /images/Salade%20Cesar.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:14,475 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:14] "[36mGET /images/Soupe%20a%20l'oignon.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:14,479 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:14] "[36mGET /images/Soupe%20du%20jour.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:14,489 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:14] "[36mGET /images/Tartare%20de%20saumon.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:14,607 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:14] "[36mGET /images/Tarte%20tatin.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:14,957 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:14] "[36mGET /images/Tiramisu.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:14,965 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:14] "[36mGET /images/coca%20cherry.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:14,975 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:14] "[36mGET /images/7up.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:14,979 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:14] "[36mGET /images/coca%20zero.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:14,999 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:14] "[36mGET /images/Eau%20gazeuse%20San%20Pellegrino.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:15,027 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:15] "[36mGET /images/eau.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:15,367 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:15] "[36mGET /images/fanta%20orange.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:15,373 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:15] "[36mGET /images/jus%20d'orange.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:15,392 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:15] "[36mGET /images/lipton.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:15,396 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:15] "[36mGET /images/pepsi%20zero.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:15,408 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:15] "[36mGET /images/pepsi.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:15,413 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:15] "[36mGET /images/cafe.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:15,727 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:15] "[36mGET /images/smoothie%20tropical.png HTTP/1.1[0m" 304 -
+2026-08-26 17:37:38,506 - INFO - 127.0.0.1 - - [26/Aug/2026 17:37:38] "GET /admin HTTP/1.1" 200 -
+2026-08-26 17:38:21,266 - INFO - 127.0.0.1 - - [26/Aug/2026 17:38:21] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:38:26,276 - INFO - 127.0.0.1 - - [26/Aug/2026 17:38:26] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:38:31,584 - INFO - 127.0.0.1 - - [26/Aug/2026 17:38:31] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:38:36,273 - INFO - 127.0.0.1 - - [26/Aug/2026 17:38:36] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:38:41,767 - INFO - 127.0.0.1 - - [26/Aug/2026 17:38:41] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:38:46,445 - INFO - 127.0.0.1 - - [26/Aug/2026 17:38:46] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:38:51,758 - INFO - 127.0.0.1 - - [26/Aug/2026 17:38:51] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:38:56,451 - INFO - 127.0.0.1 - - [26/Aug/2026 17:38:56] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:39:01,763 - INFO - 127.0.0.1 - - [26/Aug/2026 17:39:01] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:39:06,447 - INFO - 127.0.0.1 - - [26/Aug/2026 17:39:06] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:39:11,773 - INFO - 127.0.0.1 - - [26/Aug/2026 17:39:11] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:39:16,460 - INFO - 127.0.0.1 - - [26/Aug/2026 17:39:16] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:39:21,770 - INFO - 127.0.0.1 - - [26/Aug/2026 17:39:21] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:39:26,446 - INFO - 127.0.0.1 - - [26/Aug/2026 17:39:26] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:39:31,761 - INFO - 127.0.0.1 - - [26/Aug/2026 17:39:31] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:39:36,442 - INFO - 127.0.0.1 - - [26/Aug/2026 17:39:36] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:40:19,767 - INFO - 127.0.0.1 - - [26/Aug/2026 17:40:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:41:19,454 - INFO - 127.0.0.1 - - [26/Aug/2026 17:41:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:42:19,760 - INFO - 127.0.0.1 - - [26/Aug/2026 17:42:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:43:19,468 - INFO - 127.0.0.1 - - [26/Aug/2026 17:43:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:44:19,770 - INFO - 127.0.0.1 - - [26/Aug/2026 17:44:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:45:19,455 - INFO - 127.0.0.1 - - [26/Aug/2026 17:45:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:46:19,757 - INFO - 127.0.0.1 - - [26/Aug/2026 17:46:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:47:19,454 - INFO - 127.0.0.1 - - [26/Aug/2026 17:47:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:48:19,773 - INFO - 127.0.0.1 - - [26/Aug/2026 17:48:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:49:19,448 - INFO - 127.0.0.1 - - [26/Aug/2026 17:49:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:49:28,656 - INFO - 127.0.0.1 - - [26/Aug/2026 17:49:28] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:49:31,263 - INFO - 127.0.0.1 - - [26/Aug/2026 17:49:31] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:49:31,828 - INFO - 127.0.0.1 - - [26/Aug/2026 17:49:31] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:49:33,012 - INFO - 127.0.0.1 - - [26/Aug/2026 17:49:33] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:49:34,210 - INFO - 127.0.0.1 - - [26/Aug/2026 17:49:34] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:49:36,265 - INFO - 127.0.0.1 - - [26/Aug/2026 17:49:36] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:49:41,589 - INFO - 127.0.0.1 - - [26/Aug/2026 17:49:41] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:49:46,453 - INFO - 127.0.0.1 - - [26/Aug/2026 17:49:46] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:49:51,765 - INFO - 127.0.0.1 - - [26/Aug/2026 17:49:51] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:49:56,462 - INFO - 127.0.0.1 - - [26/Aug/2026 17:49:56] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:50:01,757 - INFO - 127.0.0.1 - - [26/Aug/2026 17:50:01] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:50:06,468 - INFO - 127.0.0.1 - - [26/Aug/2026 17:50:06] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:50:11,770 - INFO - 127.0.0.1 - - [26/Aug/2026 17:50:11] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:50:16,467 - INFO - 127.0.0.1 - - [26/Aug/2026 17:50:16] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:50:21,765 - INFO - 127.0.0.1 - - [26/Aug/2026 17:50:21] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:50:26,459 - INFO - 127.0.0.1 - - [26/Aug/2026 17:50:26] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:50:31,765 - INFO - 127.0.0.1 - - [26/Aug/2026 17:50:31] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:50:36,444 - INFO - 127.0.0.1 - - [26/Aug/2026 17:50:36] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:50:41,763 - INFO - 127.0.0.1 - - [26/Aug/2026 17:50:41] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:51:19,456 - INFO - 127.0.0.1 - - [26/Aug/2026 17:51:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:52:19,763 - INFO - 127.0.0.1 - - [26/Aug/2026 17:52:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:53:19,443 - INFO - 127.0.0.1 - - [26/Aug/2026 17:53:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:54:19,760 - INFO - 127.0.0.1 - - [26/Aug/2026 17:54:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:55:19,445 - INFO - 127.0.0.1 - - [26/Aug/2026 17:55:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:56:19,759 - INFO - 127.0.0.1 - - [26/Aug/2026 17:56:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:57:19,447 - INFO - 127.0.0.1 - - [26/Aug/2026 17:57:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:58:19,758 - INFO - 127.0.0.1 - - [26/Aug/2026 17:58:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 17:59:19,448 - INFO - 127.0.0.1 - - [26/Aug/2026 17:59:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 18:00:19,763 - INFO - 127.0.0.1 - - [26/Aug/2026 18:00:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 18:01:19,440 - INFO - 127.0.0.1 - - [26/Aug/2026 18:01:19] "GET /admin/logs?key=monitoring_2024_secure HTTP/1.1" 200 -
+2026-08-26 18:01:25,700 - INFO -  * Detected change in 'C:\\Users\\MonPC\\Desktop\\projet PFE\\backend\\app.py', reloading

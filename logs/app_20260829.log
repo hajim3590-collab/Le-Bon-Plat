@@ -1,0 +1,84 @@
+2026-08-29 15:49:07,469 - INFO - ================================================================================
+2026-08-29 15:49:07,470 - INFO - APPLICATION LE BON PLAT DEMARREE
+2026-08-29 15:49:07,470 - INFO - ================================================================================
+2026-08-29 15:49:07,616 - INFO - REQUEST GET /health - IP: 127.0.0.1
+2026-08-29 15:49:07,618 - INFO - RESPONSE GET /health - Status: 200 - Temps: 1.43ms
+2026-08-29 15:49:07,624 - INFO - REQUEST GET /api/status - IP: 127.0.0.1
+2026-08-29 15:49:07,625 - INFO - RESPONSE GET /api/status - Status: 200 - Temps: 0.71ms
+2026-08-29 15:49:07,631 - INFO - REQUEST GET /api/menu - IP: 127.0.0.1
+2026-08-29 15:49:07,637 - INFO - RESPONSE GET /api/menu - Status: 200 - Temps: 5.35ms
+2026-08-29 15:49:07,644 - INFO - REQUEST GET /api/menu/Grill - IP: 127.0.0.1
+2026-08-29 15:49:07,646 - INFO - RESPONSE GET /api/menu/Grill - Status: 200 - Temps: 1.79ms
+2026-08-29 15:49:07,651 - INFO - REQUEST GET /api/menu - IP: 127.0.0.1
+2026-08-29 15:49:07,652 - INFO - RESPONSE GET /api/menu - Status: 200 - Temps: 1.09ms
+2026-08-29 15:49:07,658 - INFO - REQUEST GET /api/reviews - IP: 127.0.0.1
+2026-08-29 15:49:07,660 - INFO - RESPONSE GET /api/reviews - Status: 200 - Temps: 1.94ms
+2026-08-29 15:49:07,666 - INFO - REQUEST POST /api/reviews - IP: 127.0.0.1
+2026-08-29 15:49:07,670 - INFO - RESPONSE POST /api/reviews - Status: 201 - Temps: 3.75ms
+2026-08-29 15:49:07,676 - INFO - REQUEST POST /api/reviews - IP: 127.0.0.1
+2026-08-29 15:49:07,678 - INFO - RESPONSE POST /api/reviews - Status: 400 - Temps: 1.82ms
+2026-08-29 15:49:07,687 - INFO - REQUEST POST /api/recommendations - IP: 127.0.0.1
+2026-08-29 15:49:07,744 - INFO - RESPONSE POST /api/recommendations - Status: 200 - Temps: 57.09ms
+2026-08-29 15:49:07,754 - INFO - REQUEST GET /api/inexistant - IP: 127.0.0.1
+2026-08-29 15:49:07,755 - ERROR - ERREUR: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2026-08-29 15:49:07,756 - INFO - RESPONSE GET /api/inexistant - Status: 500 - Temps: 2.19ms
+2026-08-29 15:49:08,637 - INFO - REQUEST POST /api/reviews - IP: 127.0.0.1
+2026-08-29 15:49:08,638 - INFO - RESPONSE POST /api/reviews - Status: 500 - Temps: 0.62ms
+2026-08-29 15:49:08,642 - INFO - REQUEST POST /api/reviews - IP: 127.0.0.1
+2026-08-29 15:49:08,643 - INFO - RESPONSE POST /api/reviews - Status: 500 - Temps: 0.99ms
+2026-08-29 15:49:08,648 - INFO - REQUEST POST /api/reviews - IP: 127.0.0.1
+2026-08-29 15:49:08,649 - INFO - RESPONSE POST /api/reviews - Status: 400 - Temps: 0.63ms
+2026-08-29 15:49:08,653 - INFO - REQUEST GET /api/menu/CATEGORIE_INEXISTANTE - IP: 127.0.0.1
+2026-08-29 15:49:08,654 - INFO - RESPONSE GET /api/menu/CATEGORIE_INEXISTANTE - Status: 200 - Temps: 0.83ms
+2026-08-29 15:49:08,658 - INFO - REQUEST GET /api/menu/GRILL - IP: 127.0.0.1
+2026-08-29 15:49:08,659 - INFO - RESPONSE GET /api/menu/GRILL - Status: 200 - Temps: 0.84ms
+2026-08-29 15:49:08,660 - INFO - REQUEST GET /api/menu/grill - IP: 127.0.0.1
+2026-08-29 15:49:08,661 - INFO - RESPONSE GET /api/menu/grill - Status: 200 - Temps: 0.80ms
+2026-08-29 15:49:08,662 - INFO - REQUEST GET /api/menu/Grill - IP: 127.0.0.1
+2026-08-29 15:49:08,665 - INFO - RESPONSE GET /api/menu/Grill - Status: 200 - Temps: 2.54ms
+2026-08-29 15:49:08,879 - INFO - REQUEST POST /api/recommendations - IP: 127.0.0.1
+2026-08-29 15:49:08,908 - INFO - RESPONSE POST /api/recommendations - Status: 200 - Temps: 28.92ms
+2026-08-29 15:49:08,916 - INFO - REQUEST POST /api/recommendations - IP: 127.0.0.1
+2026-08-29 15:49:08,953 - INFO - RESPONSE POST /api/recommendations - Status: 200 - Temps: 36.45ms
+2026-08-29 15:50:27,596 - INFO - ================================================================================
+2026-08-29 15:50:27,597 - INFO - APPLICATION LE BON PLAT DEMARREE
+2026-08-29 15:50:27,598 - INFO - ================================================================================
+2026-08-29 15:50:27,685 - INFO - REQUEST GET /health - IP: 127.0.0.1
+2026-08-29 15:50:27,686 - INFO - RESPONSE GET /health - Status: 200 - Temps: 1.16ms
+2026-08-29 15:50:27,693 - INFO - REQUEST GET /api/status - IP: 127.0.0.1
+2026-08-29 15:50:27,693 - INFO - RESPONSE GET /api/status - Status: 200 - Temps: 0.47ms
+2026-08-29 15:50:27,697 - INFO - REQUEST GET /api/menu - IP: 127.0.0.1
+2026-08-29 15:50:27,698 - INFO - RESPONSE GET /api/menu - Status: 200 - Temps: 1.57ms
+2026-08-29 15:50:27,708 - INFO - REQUEST GET /api/menu/Grill - IP: 127.0.0.1
+2026-08-29 15:50:27,709 - INFO - RESPONSE GET /api/menu/Grill - Status: 200 - Temps: 1.54ms
+2026-08-29 15:50:27,715 - INFO - REQUEST GET /api/menu - IP: 127.0.0.1
+2026-08-29 15:50:27,716 - INFO - RESPONSE GET /api/menu - Status: 200 - Temps: 1.19ms
+2026-08-29 15:50:27,722 - INFO - REQUEST GET /api/reviews - IP: 127.0.0.1
+2026-08-29 15:50:27,723 - INFO - RESPONSE GET /api/reviews - Status: 200 - Temps: 0.89ms
+2026-08-29 15:50:27,727 - INFO - REQUEST POST /api/reviews - IP: 127.0.0.1
+2026-08-29 15:50:27,730 - INFO - RESPONSE POST /api/reviews - Status: 201 - Temps: 2.72ms
+2026-08-29 15:50:27,736 - INFO - REQUEST POST /api/reviews - IP: 127.0.0.1
+2026-08-29 15:50:27,737 - INFO - RESPONSE POST /api/reviews - Status: 400 - Temps: 1.28ms
+2026-08-29 15:50:27,743 - INFO - REQUEST POST /api/recommendations - IP: 127.0.0.1
+2026-08-29 15:50:27,786 - INFO - RESPONSE POST /api/recommendations - Status: 200 - Temps: 42.94ms
+2026-08-29 15:50:27,796 - INFO - REQUEST GET /api/inexistant - IP: 127.0.0.1
+2026-08-29 15:50:27,797 - WARNING - 404 NOT FOUND: /api/inexistant
+2026-08-29 15:50:27,797 - INFO - RESPONSE GET /api/inexistant - Status: 404 - Temps: 1.19ms
+2026-08-29 15:50:27,803 - INFO - REQUEST POST /api/reviews - IP: 127.0.0.1
+2026-08-29 15:50:27,804 - INFO - RESPONSE POST /api/reviews - Status: 500 - Temps: 1.12ms
+2026-08-29 15:50:27,809 - INFO - REQUEST POST /api/reviews - IP: 127.0.0.1
+2026-08-29 15:50:27,810 - INFO - RESPONSE POST /api/reviews - Status: 500 - Temps: 1.18ms
+2026-08-29 15:50:27,816 - INFO - REQUEST POST /api/reviews - IP: 127.0.0.1
+2026-08-29 15:50:27,817 - INFO - RESPONSE POST /api/reviews - Status: 400 - Temps: 0.76ms
+2026-08-29 15:50:27,823 - INFO - REQUEST GET /api/menu/CATEGORIE_INEXISTANTE - IP: 127.0.0.1
+2026-08-29 15:50:27,825 - INFO - RESPONSE GET /api/menu/CATEGORIE_INEXISTANTE - Status: 200 - Temps: 1.38ms
+2026-08-29 15:50:27,830 - INFO - REQUEST GET /api/menu/GRILL - IP: 127.0.0.1
+2026-08-29 15:50:27,832 - INFO - RESPONSE GET /api/menu/GRILL - Status: 200 - Temps: 1.22ms
+2026-08-29 15:50:27,833 - INFO - REQUEST GET /api/menu/grill - IP: 127.0.0.1
+2026-08-29 15:50:27,834 - INFO - RESPONSE GET /api/menu/grill - Status: 200 - Temps: 1.01ms
+2026-08-29 15:50:27,835 - INFO - REQUEST GET /api/menu/Grill - IP: 127.0.0.1
+2026-08-29 15:50:27,836 - INFO - RESPONSE GET /api/menu/Grill - Status: 200 - Temps: 0.68ms
+2026-08-29 15:50:27,943 - INFO - REQUEST POST /api/recommendations - IP: 127.0.0.1
+2026-08-29 15:50:27,973 - INFO - RESPONSE POST /api/recommendations - Status: 200 - Temps: 30.22ms
+2026-08-29 15:50:27,978 - INFO - REQUEST POST /api/recommendations - IP: 127.0.0.1
+2026-08-29 15:50:28,010 - INFO - RESPONSE POST /api/recommendations - Status: 200 - Temps: 32.34ms

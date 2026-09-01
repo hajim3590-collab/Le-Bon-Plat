@@ -1,0 +1,17 @@
+{
+  "source": "extraction_site_vitrine (simulee)",
+  "note": "Represente une extraction depuis la page 'Notre carte' du site web du restaurant. Format : prix en texte francais, categories en libelle libre.",
+  "plats": [
+    {"nom": "Salade Cesar", "categorie": "Entrees", "prix": "8,50 e"},
+    {"nom": "Soupe a l'oignon", "categorie": "Entrees", "prix": "6,00 e"},
+    {"nom": "Carpaccio de boeuf", "categorie": "Entrees", "prix": "9,90 e"},
+    {"nom": "Poulet roti frites", "categorie": "Plats", "prix": "14,50 e"},
+    {"nom": "Pates bolognaise", "categorie": "Plats", "prix": "13,00 e"},
+    {"nom": "Entrecote grillee", "categorie": "Grillades", "prix": "22,00 e"},
+    {"nom": "Brochettes mixtes", "categorie": "Grillades", "prix": "19,50 e"},
+    {"nom": "Buddha bowl legumes", "categorie": "Vege", "prix": "13,50 e"},
+    {"nom": "Tarte tatin", "categorie": "Desserts", "prix": "6,00 e"},
+    {"nom": "Fondant chocolat", "categorie": "Desserts", "prix": "7,00 e"},
+    {"nom": "Menu burger enfant", "categorie": "Enfants", "prix": "9,00 e"}
+  ]
+}
