@@ -42,4 +42,6 @@ jobs:
           docker push ${{ secrets.DOCKER_USERNAME }}/le-bon-plat:latest
 
       - name: Done
-        run: echo "✅ Image disponible sur Docker Hub — lance-la en local avec : docker run -p 5000:5000 ${{ secrets.DOCKER_USERNAME }}/le-bon-plat:latest"
+        run: |
+          echo "Image disponible sur Docker Hub"
+          echo "Pour lancer en local: docker run -p 5000:5000 ${{ secrets.DOCKER_USERNAME }}/le-bon-plat:latest"
