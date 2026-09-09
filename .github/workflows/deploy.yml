@@ -51,7 +51,7 @@ jobs:
           file: ./Dockerfile
 
       - name: Image built and pushed successfully
-        run: echo "Image Docker poussee sur Docker Hub: ${{ secrets.DOCKER_USERNAME }}/le-bon-plat:latest"
+        run: echo "Image Docker poussee sur Docker Hub"
 
   # Étape 3: Déclencher le déploiement sur Render
   notify-render:
