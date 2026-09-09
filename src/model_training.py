@@ -17,8 +17,8 @@ print("="*80)
 # ===== ÉTAPE 1 : Charger et préparer les données =====
 print("\n--- CHARGEMENT DES DONNÉES ---")
 
-df = pd.read_csv('../data/processed/sales_history_clean.csv')
-df_menu = pd.read_csv('../data/processed/menu_final_clean.csv')
+df = pd.read_csv('data/processed/sales_history_clean.csv')
+df_menu = pd.read_csv('data/processed/menu_final_clean.csv')
 
 # Fusionner les données
 df_sales_menu = df.merge(df_menu[['dish_name', 'category']], left_on='dish_category', right_on='category', how='left')
@@ -139,7 +139,7 @@ print("\n")
 print(comparison_df.to_string(index=False))
 
 # Sauvegarder le tableau
-comparison_df.to_csv('../data/processed/modeles_comparaison_v3_mois_jour.csv', index=False)
+comparison_df.to_csv('data/processed/modeles_comparaison_v3_mois_jour.csv', index=False)
 print("\n✓ Tableau sauvegardé : modeles_comparaison_v3_mois_jour.csv")
 
 # ===== ÉTAPE 9 : Créer des graphiques comparatifs =====
@@ -188,7 +188,7 @@ for i, v in enumerate(comparison_df['Temps (s)']):
 ax4.tick_params(axis='x', rotation=45)
 
 plt.tight_layout()
-plt.savefig('../data/processed/modeles_comparaison_v3_mois_jour.png', dpi=100, bbox_inches='tight')
+plt.savefig('data/processed/modeles_comparaison_v3_mois_jour.png', dpi=100, bbox_inches='tight')
 print("✓ Graphique comparatif sauvegardé : modeles_comparaison_v3_mois_jour.png")
 plt.show()
 
@@ -206,11 +206,11 @@ print(f"   Accuracy : {best_accuracy:.4f} ({best_accuracy*100:.2f}%)")
 # Sauvegarder le meilleur modèle
 import pickle
 best_model = results[best_model_name]['model']
-pickle.dump(best_model, open('../data/processed/best_model_v3_mois_jour.pkl', 'wb'))
+pickle.dump(best_model, open('data/processed/best_model_v3_mois_jour.pkl', 'wb'))
 print("\n✓ Meilleur modèle sauvegardé : best_model_v3_mois_jour.pkl")
 
 # Sauvegarder les encodeurs aussi
-pickle.dump(le_category, open('../data/processed/le_category.pkl', 'wb'))
+pickle.dump(le_category, open('data/processed/le_category.pkl', 'wb'))
 print("✓ Encodeurs sauvegardés : le_category.pkl")
 
 # ===== ÉTAPE 11 : Confusion Matrix pour le meilleur modèle =====
@@ -249,7 +249,7 @@ for i in range(cm.shape[0]):
 fig.colorbar(im, ax=ax)
 plt.title(f'Confusion Matrix - {best_model_name} (MOIS + JOUR)')
 plt.tight_layout()
-plt.savefig('../data/processed/confusion_matrix_v3_mois_jour.png', dpi=100, bbox_inches='tight')
+plt.savefig('data/processed/confusion_matrix_v3_mois_jour.png', dpi=100, bbox_inches='tight')
 print("\n✓ Confusion matrix sauvegardée : confusion_matrix_v3_mois_jour.png")
 plt.show()
 
